@@ -49,11 +49,11 @@ export default function Dashboard({ onStartChallenge, userStats }: DashboardProp
           Dunia luar sangat kejam, Kohai. Klien sering datang membawa ide yang kabur bagaikan kabut.
           Tugasmu di sini <strong>bukan untuk langsung menulis kode</strong>, melainkan memfokuskan pikiran dan melatih caramu memberi instruksi yang tajam kepada AI.
           <br/><br/>
-          Pilih salah satu ujian di bawah ini. Buktikan bahwa kau bisa membedah ide mereka menjadi 3-5 jurus fitur inti (*core features*)!
+          Pilih salah satu ujian di bawah ini. Buktikan bahwa kau bisa membedah ide mereka menjadi 3-5 jurus fitur inti (<em>core features</em>)!
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
         {challenges.map((challenge, index) => {
           const stats = userStats?.challengeStats[challenge.id];
           
