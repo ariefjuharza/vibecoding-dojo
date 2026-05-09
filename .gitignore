@@ -18,6 +18,9 @@ dist-ssr/
 .env.*
 !.env.example
 
+# Docs
+VOICEOVER.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
