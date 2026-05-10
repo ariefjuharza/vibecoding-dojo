@@ -174,8 +174,8 @@ export default function RefactorLab({ onUpdateStats }: RefactorLabProps) {
                     Salin Kode
                   </button>
                 </div>
-                <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '8px', overflowX: 'auto' }}>
-                  <pre style={{ margin: 0 }}>
+                <div style={{ backgroundColor: 'rgba(0,0,0,0.4)', padding: '1rem', borderRadius: '8px', overflowX: 'auto' }}>
+                  <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
                     <code style={{ fontFamily: 'monospace', fontSize: '0.9rem', color: '#e2e8f0' }}>
                       {feedback.refactored_code}
                     </code>

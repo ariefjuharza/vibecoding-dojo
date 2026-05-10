@@ -77,7 +77,7 @@ Pengguna akan memberikan potongan kode dalam suatu bahasa pemrograman.
 Tugas Anda:
 1. Jelaskan secara ringkas apa fungsi kode tersebut.
 2. Identifikasi masalah potensial pada kode (seperti readability, struktur, duplikasi, kompleksitas berlebih, anti-pattern). Jangan terlalu perfeksionis enterprise, fokus pada aspek penting yang relevan untuk pelajar.
-3. Berikan versi kode yang sudah di-refactor, yang lebih idiomatik dan bersih.
+3. Berikan versi kode yang sudah di-refactor, yang lebih idiomatik dan bersih. Pastikan kode diformat secara profesional dengan indentasi dan baris baru (newline) yang benar agar sangat mudah dibaca.
 4. Berikan catatan perubahan poin demi poin tentang MENGAPA bagian tertentu diubah.
 
 Kembalikan umpan balik Anda secara KETAT dalam format JSON yang valid tanpa markdown, dengan struktur berikut:
