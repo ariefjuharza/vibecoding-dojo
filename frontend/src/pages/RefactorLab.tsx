@@ -76,9 +76,9 @@ export default function RefactorLab({ onUpdateStats }: RefactorLabProps) {
         </p>
       </div>
 
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'stretch' }}>
-        {/* Kolom Kiri: Input Kode */}
-        <div style={{ flex: '1 1 45%', minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ display: 'flex', gap: '2rem', flexDirection: 'column', alignItems: 'stretch' }}>
+        {/* Atas: Input Kode */}
+        <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
               <h3 style={{ margin: 0 }}>Kode Mentah</h3>
@@ -117,8 +117,8 @@ export default function RefactorLab({ onUpdateStats }: RefactorLabProps) {
           </div>
         </div>
 
-        {/* Kolom Kanan: Hasil Analisis AI */}
-        <div style={{ flex: '1 1 50%', minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+        {/* Bawah: Hasil Analisis AI */}
+        <div style={{ flex: 'none', display: 'flex', flexDirection: 'column' }}>
           {isSubmitting && (
             <div className="glass-card" style={{ padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                <div style={{ width: '40px', height: '40px', borderRadius: '50%', border: '3px solid var(--border-color)', borderTopColor: 'var(--accent-primary)', animation: 'spin 1s linear infinite', marginBottom: '1rem' }}></div>
@@ -127,17 +127,20 @@ export default function RefactorLab({ onUpdateStats }: RefactorLabProps) {
           )}
 
           {!isSubmitting && !feedback && (
-             <div className="glass-card" style={{ padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', opacity: 0.5 }}>
-               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🕵️‍♂️</div>
+             <div className="glass-card" style={{ padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', opacity: 0.5 }}>
+               <img src="/sensei_avatar.png" alt="Sensei" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', border: '2px solid var(--border-color)' }} />
                <p>Jangan ragu. Letakkan kodemu, dan biarkan Sensei membimbingmu menuju jalan kode yang suci.</p>
              </div>
           )}
 
           {!isSubmitting && feedback && (
-            <div className="glass-card animate-fade-in" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', height: '100%', overflowY: 'auto' }}>
+            <div className="glass-card animate-fade-in" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-                <h3 style={{ margin: 0, color: 'var(--accent-primary)' }}>Titah Sensei</h3>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <img src="/sensei_avatar.png" alt="Sensei" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '2px solid var(--accent-primary)', boxShadow: '0 0 10px var(--accent-glow)' }} />
+                  <h3 style={{ margin: 0, color: 'var(--accent-primary)' }}>Titah Sensei</h3>
+                </div>
                 {xpGained > 0 && (
                   <div className="animate-fade-in" style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--accent-primary)', fontWeight: 'bold', padding: '0.4rem 0.8rem', borderRadius: '8px' }}>
                     +{xpGained} XP

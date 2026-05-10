@@ -139,7 +139,8 @@ export default function ChallengePage({ challengeId, onBack, onUpdateStats }: Ch
 
           {!isSubmitting && feedback && (
             <div className="glass-card animate-fade-in" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{ textAlign: 'center', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
+              <div style={{ textAlign: 'center', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)', position: 'relative' }}>
+                <img src="/sensei_avatar.png" alt="Sensei" style={{ position: 'absolute', top: 0, right: 0, width: '60px', height: '60px', borderRadius: '50%', border: '2px solid var(--accent-primary)', boxShadow: '0 0 10px var(--accent-glow)' }} />
                 <h3 style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>Nilai Kedisiplinan</h3>
                 <div style={{ 
                   fontSize: '3.5rem', 
@@ -191,7 +192,7 @@ export default function ChallengePage({ challengeId, onBack, onUpdateStats }: Ch
 
           {!isSubmitting && !feedback && (
              <div className="glass-card" style={{ padding: '3rem 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', opacity: 0.5 }}>
-               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🤖</div>
+               <img src="/sensei_avatar.png" alt="Sensei" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', border: '2px solid var(--border-color)' }} />
                <p>Fokuskan pikiranmu, ketik instruksimu, dan tunjukkan pada Sensei apa yang kau bisa!</p>
              </div>
           )}
